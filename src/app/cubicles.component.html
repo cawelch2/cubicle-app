@@ -9,7 +9,6 @@
         <ng-container *ngFor="let cubicle of cubicles">
         <li *ngIf="!cubicle.mon"(click)="onSelect(cubicle)"
             [class.selected]="cubicle === selectedCubicle">
-            <span class="badge">{{cubicle.id}}</span>
             <span>{{cubicle.name}}</span>
         </li>
         </ng-container>
@@ -21,7 +20,6 @@
         <ng-container *ngFor="let cubicle of cubicles">
         <li *ngIf="!cubicle.tues"(click)="onSelect(cubicle)"
             [class.selected]="cubicle === selectedCubicle">
-            <span class="badge">{{cubicle.id}}</span>
             <span>{{cubicle.name}}</span>
         </li>
         </ng-container>
@@ -33,7 +31,6 @@
         <ng-container *ngFor="let cubicle of cubicles">
         <li *ngIf="!cubicle.wed"(click)="onSelect(cubicle)"
             [class.selected]="cubicle === selectedCubicle">
-            <span class="badge">{{cubicle.id}}</span>
             <span>{{cubicle.name}}</span>
         </li>
         </ng-container>
@@ -45,7 +42,6 @@
         <ng-container *ngFor="let cubicle of cubicles">
         <li *ngIf="!cubicle.thurs"(click)="onSelect(cubicle)"
             [class.selected]="cubicle === selectedCubicle">
-            <span class="badge">{{cubicle.id}}</span>
             <span>{{cubicle.name}}</span>
         </li>
         </ng-container>
@@ -57,7 +53,6 @@
         <ng-container *ngFor="let cubicle of cubicles">
         <li *ngIf="!cubicle.fri"(click)="onSelect(cubicle)"
             [class.selected]="cubicle === selectedCubicle">
-            <span class="badge">{{cubicle.id}}</span>
             <span>{{cubicle.name}}</span>
         </li>
         </ng-container>

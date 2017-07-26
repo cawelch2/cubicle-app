@@ -38,7 +38,8 @@ div .first {
   margin-right: 45px;
 }
 div .delete {
-  margin-left: 100px;
+  right: 68%;
+  position: fixed;
   padding-top: none;
   padding-bottom: none;
   margin-top: none;

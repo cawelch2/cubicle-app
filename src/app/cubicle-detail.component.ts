@@ -24,30 +24,38 @@ export class CubicleDetailComponent implements OnInit {
       .subscribe(cubicle => this.cubicleService.cubicle = cubicle);
   }
 
+  //Used to power the "Back" button
   goBack(): void {
     this.location.back();
   }
 
+  //Each method assigns a name to a weekday variable in the cubicle array
   setMonday(tempMon: string): void {
     this.cubicleService.cubicle.mon=tempMon;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setTuesday(tempTues: string): void {
     this.cubicleService.cubicle.tues=tempTues;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setWednesday(tempWed: string): void {
     this.cubicleService.cubicle.wed=tempWed;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setThursday(tempThurs: string): void {
     this.cubicleService.cubicle.thurs=tempThurs;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setFriday(tempFri: string): void {
     this.cubicleService.cubicle.fri=tempFri;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
+  //Used to power the "Reserve" button checks which checkboxes are checked and makes sure the name is not an emptry string, then assigns the name to the days that are checked
   save(cubicleMon: boolean, cubicleTues: boolean, cubicleWed: boolean, cubicleThurs: boolean, cubicleFri: boolean, tempName: string): void {
     if(cubicleMon && tempName!='')
       this.setMonday(tempName);

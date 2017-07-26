@@ -14,6 +14,7 @@ export class DashboardComponent implements OnInit {
 
   constructor(private cubicleService: CubicleService) { }
 
+  //When the app is started, the cubicles are retrieved and displayed on the dashboard
   ngOnInit(): void {
     this.cubicleService.getCubicles()
       .then(cubicles => this.cubicles = cubicles.slice(0));

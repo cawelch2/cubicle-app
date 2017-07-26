@@ -6,6 +6,7 @@ import { CubiclesComponent }      from './cubicles.component';
 import { CubicleDetailComponent }  from './cubicle-detail.component';
 import { CubicleReserveComponent } from './cubicle-reserve.component';
 
+//Used to navigate to the different components of the app
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'dashboard',  component: DashboardComponent },

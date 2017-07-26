@@ -24,31 +24,39 @@ export class CubicleReserveComponent implements OnInit {
       .switchMap((params: Params) => this.cubicleService.getCubicle(+params['id']))
       .subscribe(cubicle => this.cubicleService.cubicle = cubicle);
   }
-
+  
+  //Used to power the "Back" button
   goBack() {
     this.location.back();
   }
 
+  //Each method assigns a name to a weekday variable in the cubicle array
   setMonday(tempMon: string): void {
     this.cubicleService.cubicle.mon=tempMon;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setTuesday(tempTues: string): void {
     this.cubicleService.cubicle.tues=tempTues;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setWednesday(tempWed: string): void {
     this.cubicleService.cubicle.wed=tempWed;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setThursday(tempThurs: string): void {
     this.cubicleService.cubicle.thurs=tempThurs;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setFriday(tempFri: string): void {
     this.cubicleService.cubicle.fri=tempFri;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
+  //Used to power the "Reserve" button, checks if each string is not empty and not null, then assigns it to the appropriate variable in the cubicles array
   save(cubicleMon: string, cubicleTues: string, cubicleWed: string, cubicleThurs: string, cubicleFri: string): void {
     if(cubicleMon!='' && cubicleMon!=null)
       this.setMonday(cubicleMon);

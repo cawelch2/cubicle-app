@@ -1,5 +1,7 @@
 import { InMemoryDbService } from '@angular/in-memory-web-api';
 export class InMemoryDataService implements InMemoryDbService {
+  
+  //This houses the array of cubicles that holds the information for the week for each cubicle
   createDb() {
     const cubicles = [
       { id: 0, name: 'A1', employeeName: '', mon: '', tues: '', wed: '', thurs: '', fri: '' },

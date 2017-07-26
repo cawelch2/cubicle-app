@@ -1,22 +1,30 @@
 import 'rxjs/add/operator/switchMap';
-import { Component, OnInit }      from '@angular/core';
+import { Component, OnInit, DoCheck }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
 
 import { Cubicle }         from './cubicle';
 import { CubicleService }  from './cubicle.service';
+import { DashboardComponent } from './dashboard.component';
+
 @Component({
   selector: 'cubicle-detail',
   templateUrl: './cubicle-detail.component.html',
   styleUrls: [ './cubicle-detail.component.css' ]
 })
-export class CubicleDetailComponent implements OnInit {
+export class CubicleDetailComponent implements OnInit, DoCheck {
 
   constructor(
     private cubicleService: CubicleService,
     private route: ActivatedRoute,
-    private location: Location
+    private location: Location,
+    private dashboard: DashboardComponent
   ) {}
+
+  //Refresh the date anytime a change is made
+  ngDoCheck(): void {
+    this.dashboard.ngDoCheck();
+  }
 
   ngOnInit(): void {
     this.route.params

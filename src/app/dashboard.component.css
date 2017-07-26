@@ -48,6 +48,9 @@ p {
   cursor: pointer;
   color: white;
 }
+.module .taken {
+  color: red;
+}
 .grid-pad {
   padding: 10px 0;
 }

@@ -30,7 +30,7 @@ import { CubicleReserveComponent } from './cubicle-reserve.component';
     CubiclesComponent,
     CubicleReserveComponent
   ],
-  providers: [ CubicleService ],
+  providers: [ CubicleService, DashboardComponent ],
   bootstrap: [ AppComponent ]
 })
 export class AppModule { }

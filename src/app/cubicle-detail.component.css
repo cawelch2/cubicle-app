@@ -1,0 +1,52 @@
+label {
+  display: inline-block;
+  width: 3em;
+  margin: .5em 0;
+  color: black;
+  font-family: 'Fjalla One', sans-serif;
+}
+input {
+  height: 1.8em;
+  font-size: 1em;
+  margin-left: 40px;
+  font-family: 'Fjalla One', sans-serif;
+  border: blue solid thin;
+}
+button {
+  margin-top: 20px;
+  background-color: lightskyblue;
+  color: black;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer; cursor: hand;
+  font-family: 'Fjalla One', sans-serif;
+}
+button:hover {
+  color: white;
+  background-color: blue;
+}
+button:disabled {
+  background-color: lightskyblue;
+  color: black; 
+  cursor: auto;
+}
+form .checkbox {
+  word-spacing: auto;
+  text-align: center;
+  display: inline-block;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+input .checkbox {
+  text-align: center;
+  display: inline-block;
+}
+div .display {
+  margin-right: 30px;
+}
+h2 {
+  font-family: 'Fjalla One', sans-serif;
+  margin-top: 20px;
+  margin-bottom: 0px;
+}

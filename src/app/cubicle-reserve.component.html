@@ -1,0 +1,71 @@
+<div class="container">
+  <div *ngIf="cubicleService.cubicle">
+    <h2>{{cubicleService.cubicle.name}} details!</h2>
+    <div>
+      <label class="first">cubicle: </label>{{cubicleService.cubicle.name}}</div>
+    <div *ngIf="!cubicleService.cubicle.mon; else first">
+      <div>
+        <label>Monday: </label>
+        <input [(ngModel)]="cubicleMon" placeholder="employee" />
+      </div>
+    </div>
+    <div *ngIf="!cubicleService.cubicle.tues; else second">
+      <div>
+        <label>Tuesday: </label>
+        <input [(ngModel)]="cubicleTues" placeholder="employee" />
+      </div>
+    </div>
+    <div *ngIf="!cubicleService.cubicle.wed; else third">
+      <div>
+        <label>Wednesday: </label>
+        <input [(ngModel)]="cubicleWed" placeholder="employee" />
+      </div>
+    </div>
+    <div *ngIf="!cubicleService.cubicle.thurs; else fourth">
+      <div>
+        <label>Thursday: </label>
+        <input [(ngModel)]="cubicleThurs" placeholder="employee" />
+      </div>
+    </div>
+    <div *ngIf="!cubicleService.cubicle.fri; else fifth">
+      <div>
+        <label>Friday: </label>
+        <input [(ngModel)]="cubicleFri" placeholder="employee" />
+      </div>
+    </div>
+    <ng-template #first>
+      <div>
+        <label class="name">Monday: </label>{{cubicleService.cubicle.mon}}
+        <button class="delete" (click)="setMonday('')">x</button>
+      </div>
+    </ng-template>
+    <ng-template #second>
+      <div>
+        <label class="name">Tuesday: </label>{{cubicleService.cubicle.tues}}
+        <button class="delete" (click)="setTuesday('')">x</button>
+      </div>
+    </ng-template>
+    <ng-template #third>
+      <div>
+        <label class="name">Wednesday: </label>{{cubicleService.cubicle.wed}}
+        <button class="delete" (click)="setWednesday('')">x</button>
+      </div>
+    </ng-template>
+    <ng-template #fourth>
+      <div>
+        <label class="name">Thursday: </label>{{cubicleService.cubicle.thurs}}
+        <button class="delete" (click)="setThursday('')">x</button>
+      </div>
+    </ng-template>
+    <ng-template #fifth>
+      <div>
+        <label class="name">Friday: </label>{{cubicleService.cubicle.fri}}
+        <button class="delete" (click)="setFriday('')">x</button>
+      </div>
+    </ng-template>
+    <div>
+      <button class="save" (click)="goBack()">Back</button>
+      <button class="save" (click)="save(cubicleMon, cubicleTues, cubicleWed, cubicleThurs, cubicleFri)">Reserve</button>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,34 @@
+<div class="container">
+  <div *ngIf="cubicleService.cubicle">
+    <h2>{{cubicleService.cubicle.name}} details!</h2>
+    <div>
+      <label class="display">cubicle: </label>{{cubicleService.cubicle.name}}</div>
+    <div>
+      <label>employee: </label>
+      <input [(ngModel)]="tempName" placeholder="employee" />
+    </div>
+    <form>
+      <div class="checkbox">
+        <label *ngIf="!cubicleService.cubicle.mon">
+          <input class="checkbox" type="checkbox" value="" [(ngModel)]="monday" name="first">Mon
+        </label>
+        <label *ngIf="!cubicleService.cubicle.tues">
+          <input class="checkbox" type="checkbox" value="" [(ngModel)]="tuesday" name="second">Tues
+        </label>
+        <label *ngIf="!cubicleService.cubicle.wed">
+          <input class="checkbox" type="checkbox" value="" [(ngModel)]="wednesday" name="third">Wed
+        </label>
+        <label *ngIf="!cubicleService.cubicle.thurs">
+          <input class="checkbox" type="checkbox" value="" [(ngModel)]="thursday" name="fourth">Thurs
+        </label>
+        <label *ngIf="!cubicleService.cubicle.fri">
+          <input class="checkbox" type="checkbox" value="" [(ngModel)]="friday" name="fifth">Fri
+        </label>
+      </div>
+    </form>
+    <div>
+      <button (click)="goBack()">Back</button>
+      <button (click)="save(monday, tuesday, wednesday, thursday, friday, tempName)">Reserve</button>
+    </div>
+  </div>
+</div>

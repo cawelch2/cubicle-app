@@ -1,0 +1,11 @@
+<h2>Select a Cubicle!</h2>
+<div class="container">
+  <div class="grid grid-pad">
+    <a *ngFor="let cubicle of cubicles"  [routerLink]="['/reserve', cubicle.id]"  class="col-1-4">
+    <div class="module cubicle">
+      <h4>{{cubicle.name}}</h4>
+    </div>
+    </a>
+  </div>
+  <p>The ping pong table and extra desks are located here.</p>
+</div>

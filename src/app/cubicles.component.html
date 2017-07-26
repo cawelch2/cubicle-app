@@ -1,0 +1,70 @@
+<h2>Available Cubicles</h2>
+<div class="container-fluid">
+  <div class="row">
+    <div class="col-md-1">
+    </div>
+    <div class="col-md-2">
+      <h4>Monday</h4>
+      <ul class="cubicles">
+        <ng-container *ngFor="let cubicle of cubicles">
+        <li *ngIf="!cubicle.mon"(click)="onSelect(cubicle)"
+            [class.selected]="cubicle === selectedCubicle">
+            <span class="badge">{{cubicle.id}}</span>
+            <span>{{cubicle.name}}</span>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <h4>Tuesday</h4>
+      <ul class="cubicles">
+        <ng-container *ngFor="let cubicle of cubicles">
+        <li *ngIf="!cubicle.tues"(click)="onSelect(cubicle)"
+            [class.selected]="cubicle === selectedCubicle">
+            <span class="badge">{{cubicle.id}}</span>
+            <span>{{cubicle.name}}</span>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <h4>Wednesday</h4>
+      <ul class="cubicles">
+        <ng-container *ngFor="let cubicle of cubicles">
+        <li *ngIf="!cubicle.wed"(click)="onSelect(cubicle)"
+            [class.selected]="cubicle === selectedCubicle">
+            <span class="badge">{{cubicle.id}}</span>
+            <span>{{cubicle.name}}</span>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <h4>Thursday</h4>
+      <ul class="cubicles">
+        <ng-container *ngFor="let cubicle of cubicles">
+        <li *ngIf="!cubicle.thurs"(click)="onSelect(cubicle)"
+            [class.selected]="cubicle === selectedCubicle">
+            <span class="badge">{{cubicle.id}}</span>
+            <span>{{cubicle.name}}</span>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+    <div class="col-md-2">
+      <h4>Friday</h4>
+      <ul class="cubicles">
+        <ng-container *ngFor="let cubicle of cubicles">
+        <li *ngIf="!cubicle.fri"(click)="onSelect(cubicle)"
+            [class.selected]="cubicle === selectedCubicle">
+            <span class="badge">{{cubicle.id}}</span>
+            <span>{{cubicle.name}}</span>
+        </li>
+        </ng-container>
+      </ul>
+    </div>
+  </div>
+</div>
+<div *ngIf="selectedCubicle">
+  {{gotoDetail()}}
+</div>

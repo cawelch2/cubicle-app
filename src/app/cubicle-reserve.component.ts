@@ -31,22 +31,27 @@ export class CubicleReserveComponent implements OnInit {
 
   setMonday(tempMon: string): void {
     this.cubicleService.cubicle.mon=tempMon;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setTuesday(tempTues: string): void {
     this.cubicleService.cubicle.tues=tempTues;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setWednesday(tempWed: string): void {
     this.cubicleService.cubicle.wed=tempWed;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setThursday(tempThurs: string): void {
     this.cubicleService.cubicle.thurs=tempThurs;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   setFriday(tempFri: string): void {
     this.cubicleService.cubicle.fri=tempFri;
+    this.cubicleService.update(this.cubicleService.cubicle);
   }
 
   save(cubicleMon: string, cubicleTues: string, cubicleWed: string, cubicleThurs: string, cubicleFri: string): void {

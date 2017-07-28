@@ -18,6 +18,11 @@ h2 {
   text-align: center; margin-bottom: 0;
   font-family: 'Fjalla One', sans-serif;
 }
+h3 {
+  margin-top: 1%;
+  text-align: center;
+  font-family: 'Fjalla One', sans-serif;
+}
 h4 {
   text-align: center;
   position: relative;
@@ -48,8 +53,19 @@ p {
   cursor: pointer;
   color: white;
 }
-.module .taken {
-  color: red;
+.taken {
+  padding: 20px;
+  text-align: center;
+  color: white;
+  font-family: 'Fjalla One', sans-serif;
+  max-height: 120px;
+  min-width: 120px;
+  background-color: darkred;
+}
+.taken:hover {
+  background-color: red;
+  cursor: pointer;
+  color: white;
 }
 .grid-pad {
   padding: 10px 0;

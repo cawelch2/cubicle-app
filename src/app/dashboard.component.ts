@@ -20,6 +20,11 @@ export class DashboardComponent implements OnInit, DoCheck {
     this.today = new Date().getDay();
   }
 
+  //Used to clear the reservations for a week
+  clear(): void {
+    this.cubicles = new Array<Cubicle>();
+  }
+
   //When the app is started, the cubicles are retrieved and displayed on the dashboard
   ngOnInit(): void {
     this.cubicleService.getCubicles()
